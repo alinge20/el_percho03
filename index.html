@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Percho — Tienda de Ropa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">El Percho</a>
+            <nav class="nav">
+                <a href="#" class="nav-link active" data-category="todos">Inicio</a>
+                <a href="#" class="nav-link" data-category="mujer">Mujer</a>
+                <a href="#" class="nav-link" data-category="hombre">Hombre</a>
+                <a href="#" class="nav-link" data-category="accesorios">Accesorios</a>
+            </nav>
+            <button class="cart-btn" id="cartBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                </svg>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Nueva Colección 2026</h1>
+            <p>Descubre las últimas tendencias en moda. Estilo, comodidad y precios increíbles.</p>
+            <a href="#catalogo" class="btn-primary">Ver Catálogo</a>
+        </div>
+    </section>
+
+    <!-- Categorías -->
+    <section class="categories" id="catalogo">
+        <div class="container">
+            <h2 class="section-title">Categorías</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-filter="mujer">
+                    <div class="category-icon">👗</div>
+                    <h3>Mujer</h3>
+                    <p>Vestidos, blusas, pantalones y más</p>
+                </div>
+                <div class="category-card" data-filter="hombre">
+                    <div class="category-icon">👔</div>
+                    <h3>Hombre</h3>
+                    <p>Camisas, jeans, chaquetas y más</p>
+                </div>
+                <div class="category-card" data-filter="accesorios">
+                    <div class="category-icon">👜</div>
+                    <h3>Accesorios</h3>
+                    <p>Bolsos, relojes, gorras y más</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="mujer">Mujer</button>
+                <button class="filter-btn" data-filter="hombre">Hombre</button>
+                <button class="filter-btn" data-filter="accesorios">Accesorios</button>
+            </div>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Carrito lateral -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Tu Carrito</h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="cart-empty">Tu carrito está vacío</p>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0</span>
+            </div>
+            <button class="btn-checkout" id="checkoutBtn">Finalizar Compra</button>
+        </div>
+    </aside>
+
+    <!-- Modal de compra -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-icon">✓</div>
+            <h2>¡Compra Simulada!</h2>
+            <p>Este es un proyecto de demostración. En una tienda real, aquí irían los datos de pago y envío.</p>
+            <button class="btn-primary" id="modalOk">Entendido</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <h3>El Percho</h3>
+                <p>Tu tienda de ropa online con las mejores tendencias y precios.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces</h4>
+                <a href="#">Inicio</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#">Contacto</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p>Bogotá, Colombia</p>
+                <p>info@elpercho.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 El Percho — Proyecto de Allison Guerrero</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
